@@ -48,8 +48,13 @@ gem 'faker'
 #Add Devise
 gem 'devise'
 
+#Add Pundit
+  gem 'pundit'
+
 #Add figaro
 gem 'figaro', '1.0'
+
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
