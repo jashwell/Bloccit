@@ -9,9 +9,7 @@
       </ul>
     </div>
   <% end %>
-  <%= f.input :title, :placeholder => "Enter post title" %>
-  <%= f.input :title, hint: false, error_html: {id: 'form-control'} %>
-  <%= f.input :body, :placeholder => "Enter post body" %>
-  <%= f.input :body, hint: false, error_html: {id: 'form-control'}
+  <%= f.input :title, :placeholder => "Enter post title", hint: false, error_html: {id: 'form-control'}%>
+  <%= f.input :body, :placeholder => "Enter post body", hint: false, error_html: {id: 'form-control'} %>
   <%= f.button :submit, :placeholder => "Save" %>
 <% end %>
