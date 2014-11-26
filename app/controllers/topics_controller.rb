@@ -13,6 +13,7 @@ class TopicsController < ApplicationController
      @topic = Topic.find(params[:id])
      @posts = @topic.posts
      authorize @topic
+     
   end
 
   def edit
