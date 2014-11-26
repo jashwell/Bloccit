@@ -9,7 +9,19 @@
       </ul>
     </div>
   <% end %>
+
   <%= f.input :title, :placeholder => "Enter post title", hint: false, error_html: {id: 'form-control'}%>
   <%= f.input :body, :placeholder => "Enter post body", hint: false, error_html: {id: 'form-control'} %>
+
+  <div class="form-group">
+    <% if post.image? %>
+      <%= image_tag( @post.image.url ) %>
+    <% end %>
+  </div>
+  <div class="form-group">
+     <%= f.label :image %>
+     <%= f.file_field :image %>
+     <%= f.hidden_field :image_cache %>
+   </div>
   <%= f.button :submit, :placeholder => "Save" %>
 <% end %>
