@@ -1,15 +1,19 @@
  class TopicPolicy < ApplicationPolicy
  
-   def index?
+  def index?
      true
-   end
+  end
  
-   def create?
+  def create?
      user.present? && user.admin?
-   end
+  end
  
-   def update?
+  def update?
      create?
-   end
+  end
+
+  def show?
+    record.public? || user.present?
+  end
 
  end
